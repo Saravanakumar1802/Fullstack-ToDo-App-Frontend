@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ToDo } from './Components/ToDo'
 import { useEffect } from 'react'
-import { getAllToDo, addToDo, updateToDo,deleteToDo } from './utils/HandleApi'
+import { getAllToDo, addToDo, updateToDo, deleteToDo } from './utils/HandleApi'
 
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div className='container'>
-      <h1>ToDo App</h1>
+      <h1 className='animate-charcter'>ToDo App</h1>
       <div className="top">
         <input type="text"
           placeholder='Add ToDos'
@@ -31,8 +31,8 @@ function App() {
           onChange={(e) => setText(e.target.value)}
         />
 
-        <div className="add" onClick={isUpdate ? () => updateToDo(toDoId, text, setToDo, setText, setIsUpdate) : () => addToDo(text, setText, setToDo)}>
-          {isUpdate ? "update" : "Add"}
+        <div className="add button-85" onClick={isUpdate ? () => updateToDo(toDoId, text, setToDo, setText, setIsUpdate) : () => addToDo(text, setText, setToDo)}>
+          {isUpdate ? "UPDATE" : "ADD"}
         </div>
 
       </div>

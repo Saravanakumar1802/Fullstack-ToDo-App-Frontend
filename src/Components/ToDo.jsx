@@ -7,10 +7,8 @@ export const ToDo = ({ text, updateMode, deleteToDo }) => {
     <div className='todo'>
       <div className="text">{text}</div>
       <div className="icons">
-
-        <EditIcon className='icon' onClick={updateMode} />
-        <DeleteForeverIcon className='icon' onClick={deleteToDo} />
-
+        <EditIcon className='icon update' onClick={updateMode} />
+        <DeleteForeverIcon className='icon delete' onClick={deleteToDo} />
       </div>
     </div>
   )
